@@ -17,6 +17,7 @@ WHERE first_name LIKE 'Raymond'
 ```
 \
 3.Insert a pair of parenthesis so that this statement returns 0.
+
 `SELECT 0 AND (0 OR 1) ; `
 
 \

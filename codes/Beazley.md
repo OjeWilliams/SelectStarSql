@@ -6,3 +6,12 @@ SELECT first_name, last_name, ex_age
 FROM executions
 WHERE ex_age <= 25 ;
 ```
+
+2.Modify the query to find the result for Raymond Landry.
+We needed to ensure that we checked for something attached to his name like Snr or Jnr.
+```
+SELECT first_name, last_name, ex_number
+FROM executions
+WHERE first_name LIKE 'Raymond'
+  AND last_name LIKE 'Landry%'
+```

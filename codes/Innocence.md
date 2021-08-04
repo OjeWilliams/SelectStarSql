@@ -28,5 +28,9 @@ FROM executions ;
 3.Find how many inmates were over the age of 50 at execution time.
 
 ```
-
+SELECT
+COUNT(CASE WHEN ex_age > 50 THEN 1
+	 ELSE NULL
+END)
+FROM executions ;
 ```

@@ -89,7 +89,7 @@ SELECT DISTINCT(county) FROM executions ;
 ```
 SELECT 
 (SUM(CASE WHEN last_statement LIKE '%innocent%' THEN 1
-	 ELSE 0
+	  ELSE 0
  END)*1.0 / COUNT(*)) 
 FROM executions ;
 ```

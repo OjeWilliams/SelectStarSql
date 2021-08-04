@@ -71,3 +71,9 @@ The best performance was most likely from the first suggested query since it fir
 ```
 SELECT MIN(ex_age),MAX(ex_age),AVG(ex_age) FROM executions ;
 ```
+
+\
+6.Find the average length (based on character count) of last statements in the dataset.
+```
+
+```

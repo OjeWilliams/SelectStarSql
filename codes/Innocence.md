@@ -16,4 +16,10 @@ SELECT
 FROM executions
 
 -- edited code
+SELECT
+    COUNT(CASE WHEN county='Harris' THEN 1
+        ELSE NULL END),
+    COUNT(CASE WHEN county='Bexar' THEN 1
+        ELSE NULL END)
+FROM executions ;
 ```

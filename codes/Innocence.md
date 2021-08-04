@@ -83,3 +83,9 @@ SELECT AVG(LENGTH(last_statement)) FROM executions ;
 ```
 SELECT DISTINCT(county) FROM executions ;
 ```
+
+\
+8.Find the proportion of inmates with claims of innocence in their last statements.
+```
+
+```

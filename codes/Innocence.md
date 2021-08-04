@@ -77,3 +77,9 @@ SELECT MIN(ex_age),MAX(ex_age),AVG(ex_age) FROM executions ;
 ```
 SELECT AVG(LENGTH(last_statement)) FROM executions ;
 ```
+
+\
+7.List all the counties in the dataset without duplication.
+```
+
+```

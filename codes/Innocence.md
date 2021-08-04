@@ -23,3 +23,10 @@ SELECT
         ELSE NULL END)
 FROM executions ;
 ```
+
+\
+3.Find how many inmates were over the age of 50 at execution time.
+
+```
+
+```

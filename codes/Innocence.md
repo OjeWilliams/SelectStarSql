@@ -6,3 +6,14 @@ SELECT COUNT(*) FROM executions ;
 ```
 \
 2.This query counts the number of Harris and Bexar county executions. Replace SUMs with COUNTs and edit the CASE WHEN blocks so the query still works.
+```
+-- original code
+SELECT
+    SUM(CASE WHEN county='Harris' THEN 1
+        ELSE 0 END),
+    SUM(CASE WHEN county='Bexar' THEN 1
+        ELSE 0 END)
+FROM executions
+
+-- edited code
+```

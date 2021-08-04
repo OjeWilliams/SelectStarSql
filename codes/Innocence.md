@@ -34,3 +34,10 @@ COUNT(CASE WHEN ex_age > 50 THEN 1
 END)
 FROM executions ;
 ```
+
+\
+4. Find the number of inmates who have declined to give a last statement.
+For bonus points, try to do it in 3 ways:
+1) With a WHERE block,
+2) With a COUNT and CASE WHEN block,
+3) With two COUNT functions.

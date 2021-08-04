@@ -41,3 +41,18 @@ For bonus points, try to do it in 3 ways:
 1) With a WHERE block,
 2) With a COUNT and CASE WHEN block,
 3) With two COUNT functions.
+
+-- WHERE
+```
+SELECT COUNT(*) FROM executions
+WHERE last_statement is NULL ;
+```
+-- Count and Case When Block
+
+```
+SELECT
+COUNT(CASE WHEN last_statement is NULL THEN 1
+	  ELSE NULL
+END)
+FROM executions;
+```

@@ -81,5 +81,5 @@ SELECT AVG(LENGTH(last_statement)) FROM executions ;
 \
 7.List all the counties in the dataset without duplication.
 ```
-
+SELECT DISTINCT(county) FROM executions ;
 ```

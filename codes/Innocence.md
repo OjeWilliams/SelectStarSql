@@ -63,3 +63,5 @@ SELECT
 (COUNT(*)) - (COUNT(last_statement))
 FROM executions ;
 ```
+
+The best performance was most likely from the first suggested query since it first reduced the table and then ran only once for the checks where as the last table ran through the entire dta twice.. probably more noticeable at scale.

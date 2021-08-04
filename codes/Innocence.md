@@ -56,3 +56,8 @@ COUNT(CASE WHEN last_statement is NULL THEN 1
 END)
 FROM executions;
 ```
+-- Two Counts
+
+```
+
+```

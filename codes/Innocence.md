@@ -4,3 +4,5 @@ Questions can be found [here](https://selectstarsql.com/innocence.html)
 ```
 SELECT COUNT(*) FROM executions ;
 ```
+\
+2.This query counts the number of Harris and Bexar county executions. Replace SUMs with COUNTs and edit the CASE WHEN blocks so the query still works.

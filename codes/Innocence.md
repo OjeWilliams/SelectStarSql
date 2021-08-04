@@ -59,5 +59,7 @@ FROM executions;
 -- Two Counts
 
 ```
-
+SELECT
+(COUNT(*)) - (COUNT(last_statement))
+FROM executions ;
 ```

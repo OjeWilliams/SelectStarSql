@@ -64,4 +64,10 @@ SELECT
 FROM executions ;
 ```
 
-The best performance was most likely from the first suggested query since it first reduced the table and then ran only once for the checks where as the last table ran through the entire dta twice.. probably more noticeable at scale.
+The best performance was most likely from the first suggested query since it first reduced the table and then ran only once for the checks where as the last table ran through the entire data twice.. probably more noticeable at scale.
+
+\
+5.Find the minimum, maximum and average age of inmates at the time of execution.
+```
+SELECT MIN(ex_age),MAX(ex_age),AVG(ex_age) FROM executions ;
+```

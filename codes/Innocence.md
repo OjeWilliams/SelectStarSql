@@ -87,5 +87,9 @@ SELECT DISTINCT(county) FROM executions ;
 \
 8.Find the proportion of inmates with claims of innocence in their last statements.
 ```
-
+SELECT 
+(SUM(CASE WHEN last_statement LIKE '%innocent%' THEN 1
+	 ELSE 0
+ END)*1.0 / COUNT(*)) 
+FROM executions ;
 ```

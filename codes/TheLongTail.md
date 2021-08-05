@@ -38,7 +38,8 @@ HAVING COUNT(*) > 2 ;
 \
 4.List all the distinct counties in the dataset.
 ``SELECT county FROM executions
-GROUP BY county ;``
+GROUP BY county ;
+``
 
 \
 5.Find the first and last name of the inmate with the longest last statement (by character count).

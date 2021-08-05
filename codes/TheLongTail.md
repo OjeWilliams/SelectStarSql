@@ -17,3 +17,10 @@ FROM executions
 GROUP BY county, no_statement ;
 
 ```
+
+2.Count the number of inmates aged 50 or older that were executed in each county.
+```
+SELECT county, COUNT(ex_age) FROM executions
+WHERE ex_age >= 50 
+GROUP BY county ;
+```

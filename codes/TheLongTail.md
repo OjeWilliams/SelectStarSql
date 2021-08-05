@@ -8,11 +8,12 @@ SELECT
 FROM executions
 GROUP BY county
 
-### My attempt
+###My attempt###
 SELECT
   county,
-  COUNT(*)
+  last_statement IS NOT NULL AS no_statement,
+  COUNT(last_statement)
 FROM executions
-GROUP BY county ;
+GROUP BY county, no_statement ;
 
 ```

@@ -54,7 +54,7 @@ WHERE LENGTH(last_statement) =
 \
 6.Write a query to find the percentage of executions from each county.
 ```
-SELECT county, 100*COUNT(*) / (SELECT COUNT(*) FROM executions) AS Percent_Executions
+SELECT county, 100.0*COUNT(*) / (SELECT COUNT(*) FROM executions) AS Percent_Executions
 FROM executions
 GROUP BY county
 ORDER BY Percent_Executions DESC ;

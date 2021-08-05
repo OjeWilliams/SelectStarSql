@@ -37,10 +37,10 @@ HAVING COUNT(*) > 2 ;
 
 \
 4.List all the distinct counties in the dataset.
-``
+```
 SELECT county FROM executions
 GROUP BY county ;
-``
+```
 
 \
 5.Find the first and last name of the inmate with the longest last statement (by character count).
@@ -54,5 +54,8 @@ WHERE LENGTH(last_statement) =
 \
 6.Write a query to find the percentage of executions from each county.
 ```
-
+SELECT county, 100*COUNT(*) / (SELECT COUNT(*) FROM executions) AS Percent_Executions
+FROM executions
+GROUP BY county
+ORDER BY Percent_Executions DESC ;
 ```

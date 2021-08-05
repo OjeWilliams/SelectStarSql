@@ -37,3 +37,5 @@ HAVING COUNT(*) > 2 ;
 
 \
 4.List all the distinct counties in the dataset.
+`SELECT county FROM executions
+GROUP BY county ;`

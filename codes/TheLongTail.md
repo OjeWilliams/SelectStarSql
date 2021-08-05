@@ -34,3 +34,6 @@ WHERE ex_age >= 50
 GROUP BY county
 HAVING COUNT(*) > 2 ;
 ```
+
+\
+4.List all the distinct counties in the dataset.

@@ -14,13 +14,21 @@ WHERE ex_number < 553 ;
 ```
 
 \
-3.List the counties in which more than 2 inmates aged 50 or older have been executed.
+3.Nest the query which generates the previous table into the template.
+Notice that we are using a table alias here, naming the result of the nested query "previous".
 ```
--- this also returns the count of executions in each of those counties
-SELECT county, COUNT(*) FROM executions
-WHERE ex_age >= 50
-GROUP BY county
-HAVING COUNT(*) > 2 ;
+SELECT
+  last_ex_date AS start,
+  ex_date AS end,
+  JULIANDAY(ex_date) - JULIANDAY(last_ex_date)
+    AS day_difference
+FROM executions
+JOIN (SELECT ex_number + 1 AS ex_number, ex_date AS last_ex_date
+FROM executions
+WHERE ex_number < 553 ) AS previous
+  ON executions.ex_number = previous.ex_number
+ORDER BY day_difference DESC
+LIMIT 10 ;
 ```
 
 \

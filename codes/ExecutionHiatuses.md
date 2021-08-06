@@ -45,21 +45,3 @@ JOIN executions AS previous
 ORDER BY day_difference DESC
 LIMIT 10 ;
 ```
-
-\
-5.Find the first and last name of the inmate with the longest last statement (by character count).
-```
-SELECT first_name, last_name
-FROM executions
-WHERE LENGTH(last_statement) =
-    (SELECT MAX(LENGTH(last_statement)) FROM executions) ;
-```
-
-\
-6.Write a query to find the percentage of executions from each county.
-```
-SELECT county, 100.0*COUNT(*) / (SELECT COUNT(*) FROM executions) AS Percent_Executions
-FROM executions
-GROUP BY county
-ORDER BY Percent_Executions DESC ;
-```

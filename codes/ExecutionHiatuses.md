@@ -32,10 +32,18 @@ LIMIT 10 ;
 ```
 
 \
-4.List all the distinct counties in the dataset.
+4.Fill in the JOIN ON clause to complete a more elegant version of the previous query.
 ```
-SELECT county FROM executions
-GROUP BY county ;
+SELECT
+  previous.ex_date AS start,
+  executions.ex_date AS end,
+  JULIANDAY(executions.ex_date) - JULIANDAY(previous.ex_date)
+    AS day_difference
+FROM executions
+JOIN executions AS previous
+  ON executions.ex_number = previous.ex_number + 1
+ORDER BY day_difference DESC
+LIMIT 10 ;
 ```
 
 \

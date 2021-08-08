@@ -55,6 +55,15 @@ ORDER BY group_count DESC
 3.Find the senators who cosponsored but didn't sponsor bills.
 
 ```
+-- I first ran this and checked for missing values in the right columm, I found 2 nulls.
+SELECT DISTINCT(A.cosponsor_name),B.sponsor_name  FROM cosponsors AS A
+LEFT JOIN cosponsors AS B 
+ON A.cosponsor_name = B.sponsor_name 
 
+-- This returns exactly those persons who had a null in the second column
+SELECT DISTINCT(A.cosponsor_name),B.sponsor_name  FROM cosponsors AS A
+LEFT JOIN cosponsors AS B 
+ON A.cosponsor_name = B.sponsor_name 
+WHERE B.sponsor_name IS NULL ;
 
 ```

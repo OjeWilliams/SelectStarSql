@@ -22,7 +22,7 @@ LIMIT 1 ;
 
 2.Now find the most networked senator from each state.
 If multiple senators tie for top, show both. Return columns corresponding to state, senator and mutual cosponsorship count.
-# took much longer thab expected and I need to review
+# took much longer than expected and I need to review
 ```
 WITH myCTE AS
 ( SELECT state, sen1, COUNT(*) as group_count 

@@ -19,3 +19,11 @@ GROUP BY sen1
 ORDER BY ccount DESC
 LIMIT 1 ;
 ````
+
+2.Now find the most networked senator from each state.
+If multiple senators tie for top, show both. Return columns corresponding to state, senator and mutual cosponsorship count.
+
+```
+
+
+```

@@ -51,5 +51,10 @@ AND myCTE.group_count = myCTE2.Max_count
 GROUP BY sen1
 ORDER BY group_count DESC
 ;
+```
+3.Find the senators who cosponsored but didn't sponsor bills.
+
+```
+
 
 ```
